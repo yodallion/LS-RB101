@@ -1,0 +1,114 @@
+1. A method that takes an array of strings, and returns a
+   string that is all those strings concatenated together
+
+Define a method that accepts a single array of strings as parameter.
+Within that method:
+  - Set a variable to an empty string.
+  - Iterate through the array of strings and concatenate
+    each string to the end of the empty string variable.
+  - Return the variable.
+
+START
+
+# Given an array of strings
+
+SET long_string = ''
+FOR each word in string array:
+  long_string += word
+RETURN long_string
+
+END
+
+2. A method that takes an array of integers, and returns a new 
+   array with every other element from the original array, starting 
+   with the first element.
+
+   Define a method which takes a single array of integers as parameter.
+   Within that method:
+    - Set a variable to an empty array and a counter to zero.
+    - Iterate through the integer array, using the counter to access
+      the elements of the array.
+    - Increment the counter by two after each loop
+    - Return the new integer array
+
+START
+
+# Given an array of integers
+
+SET every_other = []
+SET counter = 0
+
+WHILE counter <= integer_array.size
+  append integer_array[counter] to every_other
+  counter += 2
+
+RETURN every_other
+
+END
+
+3. A method that determines the index of the 3rd occurrence of a given 
+   character in a string. For instance, if the given character is 'x' 
+   and the string is 'axbxcdxex', the method should return 6 (the index 
+   of the 3rd 'x'). If the given character does not occur at least 3 times, 
+   return nil. 
+
+Define a method which takes a string and a single character as parameter.
+Within that method:
+  - Set a counter and an index counter both to zero.
+  - Iterate through the string, comparing each individiual character to
+    the given character.
+  - If the two characters are found to be equal, increment the counter.
+  - After each comparison, check if the counter is equal to three.
+    - If it is not equal to three, increment the index counter
+    - If it is equal to three, return the index counter.
+  - If after iterating through the entire string, if counter is less than three:
+   - Return nil.
+
+START
+
+# Given a string and a single character
+
+SET counter = 0
+SET index = 0
+
+WHILE index < string.length
+  counter += 1 IF string[index] == character
+  IF counter == 3
+    RETURN index
+  ELSE
+    index += 1
+
+RETURN nil
+
+END
+
+4. A method that takes two arrays of numbers and returns the result of 
+   merging the arrays. The elements of the first array should become the 
+   elements at the even indexes of the returned array, while the elements 
+   of the second array should become the elements at the odd indexes.
+
+Define a method which takes two arrays as parameter.
+Within that method:
+  - Set an index counter to zero.
+  - Set a variable called 'merged' to reference an empty array.
+  - Using the index counter to access the elements of each array:
+    - Append element at array1[counter] to the merged array.
+    - Append element at array2[counter] to the merged array.
+  - Continue until the value of the index counter exceeds the size
+    of the first array.
+  - Return the merged array.
+
+START
+
+# Given two arrays of equal size
+
+SET index = 0
+SET merged = []
+
+WHILE index < array1.length
+  merged << array1[index]
+  merged << array2[index]
+
+return merged
+
+END
