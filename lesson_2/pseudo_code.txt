@@ -112,3 +112,26 @@ WHILE index < array1.length
 return merged
 
 END
+
+5. A program that calculates the monthly payment amount
+   for a mortgage/car loan when given the loan amount,
+   annual percentage rate, and a duration for the loan.
+
+- Prompt user for the necessary information, i.e., the loan
+  amount, loan duration, and interest rate (APR).
+- Store these pieces of information in their appropriate
+  variables. Don't worry about input validation.
+- Convert the loan duration, which will be obtained in years,
+  into months.
+- Convert the APR into a monthly interest rate.
+- This assignment has already provided the formula for
+  determining monthly payment amount, just plug everything
+  in and output the result to the user.
+- Ask if they would like to calculate another loan.
+
+START
+
+# When given a loan amount, annual percentage rate, and
+  loan duration in years.
+
+- Format the information.
